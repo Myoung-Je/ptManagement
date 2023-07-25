@@ -15,6 +15,5 @@ export const reactLazy = (componentImport: any) => {
             }
             throw error;
         }
-
-    })
-}
+    });
+};

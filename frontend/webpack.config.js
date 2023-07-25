@@ -1,13 +1,16 @@
-import { resolve as _resolve, join } from 'path';
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
 
-import { config } from 'dotenv';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import TerserPlugin from 'terser-webpack-plugin';
-import { DefinePlugin } from 'webpack';
+const dotenv = require('dotenv');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const webpack = require('webpack');
 
-config();
+//dotenv 사용을 위한 설정
+dotenv.config();
 
-export default (env) => {
+module.exports = (env) => {
     const mode = env.mode || 'development';
 
     return {
@@ -18,7 +21,7 @@ export default (env) => {
         resolve: {
             extensions: ['.js', '.jsx', '.ts', '.tsx'],
             alias: {
-                '@': _resolve(__dirname, 'src'),
+                '@': path.resolve(__dirname, 'src'),
             },
         },
 
@@ -29,12 +32,11 @@ export default (env) => {
                     use: ['ts-loader'],
                     exclude: ['/node_modules/'],
                 },
-                // extension
+
                 {
-                    test: /\.(png|jpg|gif|svg)$/,
+                    test: /\.(png|jpg|gif)$/,
                     use: 'file-loader',
                 },
-                // css
                 {
                     test: /\.css$/,
                     use: ['style-loader', 'css-loader'],
@@ -57,22 +59,20 @@ export default (env) => {
                     : [],
         },
 
-        // build
         output: {
-            path: _resolve(__dirname, 'build'),
+            path: path.resolve(__dirname, 'build'),
             filename: '[name].bundle.js',
             publicPath: '/',
         },
 
-        // server
         devServer: {
-            static: join(__dirname, 'build'),
+            static: path.join(__dirname, 'build'),
             port: 80,
             historyApiFallback: true,
-            //proxy 설정하기
+
             proxy: {
                 '/**/*.do': {
-                    target: 'http://localhost:8080',
+                    target: 'http://localhost:8090',
                     changeOrigin: true,
                 },
             },
@@ -83,7 +83,7 @@ export default (env) => {
                 template: `./public/index.html`,
             }),
 
-            new DefinePlugin({
+            new webpack.DefinePlugin({
                 'process.env': JSON.stringify(process.env),
             }),
         ],

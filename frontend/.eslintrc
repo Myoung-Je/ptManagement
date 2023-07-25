@@ -30,6 +30,8 @@
             "error", {
                 "endOfLine":"auto"
             }
-        ]
+        ],
+        "react/prop-types": "off",
+        "@typescript-eslint/no-explicit-any": ["off"],
     }
   }
