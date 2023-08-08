@@ -33,6 +33,6 @@
         ],
         "react/prop-types": "off",
         //"@typescript-eslint/no-explicit-any": ["off"],
-        "@typescript-eslint/no-unused-vars": "off"
+        "@typescript-eslint/no-unused-vars": "off"  // 미사용 변수 빨간줄 끄기
     }
   }
