@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const reactLazy = (componentImport: any) => {
     React.lazy(async () => {
         const pageAlreadyRefreshed = JSON.parse(window.localStorage.getItem('pageRefreshed') || 'false');
