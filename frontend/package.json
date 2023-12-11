@@ -6,7 +6,7 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "webpack-dev-server --open --env mode=development",
-    "build": "webpack",
+    "dev-build": "webpack --config webpack.config.js --env mode=development",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
