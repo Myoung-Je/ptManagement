@@ -64,3 +64,5 @@ const Text = styled.span<Iprops>`
         }
     }}
 `;
+
+export default Text;
