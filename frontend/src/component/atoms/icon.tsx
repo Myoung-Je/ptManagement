@@ -7,11 +7,7 @@ export interface Iprops {
     padding?: number | string;
 }
 
-const Button = styled.button<Iprops>`
-    border: none;
-    outline: none;
-    padding: 0 12px;
-
+const Icon = styled.img<Iprops>`
     ${(props) => {
         switch (typeof props.width) {
             case 'number':
@@ -68,3 +64,5 @@ const Button = styled.button<Iprops>`
         }
     }}
 `;
+
+export default Icon;
