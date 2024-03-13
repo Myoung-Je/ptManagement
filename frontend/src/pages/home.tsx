@@ -19,7 +19,7 @@ const Home = () => {
     };
     return (
         <Wrapper>
-            <div>asd</div>
+            <div>Home</div>
         </Wrapper>
     );
 };

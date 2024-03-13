@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 
 import { reactLazy } from '@/utils/lazy/reactLazy';
+import TopNavPage from '@/component/templates/nav/topNavPage';
 
 const Home = reactLazy(() => import(/* webpackChunkName: 'home' */ '@/pages/home'));
 
@@ -21,7 +22,7 @@ export default Router;
 
 const ManageRouter = () => {
     return (
-        <Route>
+        <Route element={<TopNavPage />}>
             <Route path="/home" element={<Home />} />
         </Route>
     );

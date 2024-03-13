@@ -15,7 +15,8 @@ const TopNav = () => {
             <Container>
                 <Title>
                     <Link to="home">
-                        <Icon>Icon</Icon>
+                        {/* <Icon>Icon</Icon> */}
+                        Icon
                     </Link>
                 </Title>
                 <Menu.Container>
