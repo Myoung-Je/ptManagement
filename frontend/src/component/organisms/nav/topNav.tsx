@@ -47,7 +47,9 @@ const TopNav = () => {
 
 export default TopNav;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+    background-color: #232323;
+`;
 
 const Container = styled.div`
     display: flex;

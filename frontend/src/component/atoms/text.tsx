@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export interface Iprops {
+    color?: string;
     width?: number | string;
     height?: number | string;
     margin?: number | string;
@@ -8,6 +9,10 @@ export interface Iprops {
 }
 
 const Text = styled.span<Iprops>`
+    ${(props) => css`
+        ${props.color && `color: ${props.color};`}
+    `}
+
     ${(props) => {
         switch (typeof props.width) {
             case 'number':
