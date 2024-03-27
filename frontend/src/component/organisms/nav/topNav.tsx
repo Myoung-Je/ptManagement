@@ -23,7 +23,7 @@ const TopNav = () => {
                     <Menu.List>
                         {menuList.map((menu: any) => (
                             <Menu.ListItem key={menu.menuNm}>
-                                <Menu.Text>{menu.menuNm}</Menu.Text>
+                                <Menu.Text color="white">{menu.menuNm}</Menu.Text>
 
                                 <Menu.SubList>
                                     {menu.subMenu.map((subMenu: any) => (
