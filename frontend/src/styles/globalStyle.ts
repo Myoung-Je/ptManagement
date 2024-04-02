@@ -9,3 +9,5 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
     }
 `;
+
+export default GlobalStyle;

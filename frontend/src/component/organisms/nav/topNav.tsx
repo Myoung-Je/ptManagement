@@ -48,7 +48,7 @@ const TopNav = () => {
 export default TopNav;
 
 const Wrapper = styled.div`
-    background-color: #232323;
+    background-color: #4682b4;
 `;
 
 const Container = styled.div`
@@ -129,14 +129,14 @@ const Menu = {
         display: none;
 
         position: absolute;
-        left: 0;
-        top: 58px;
+        left: -1px;
+        top: 60px;
 
         z-index: 1000;
 
         width: 100%;
 
-        background-color: #232323;
+        background-color: #4682b4;
     `,
 
     SubListItem: styled.li`
@@ -144,6 +144,9 @@ const Menu = {
 
         color: #232323;
 
+        & > a {
+            text-decoration: none;
+        }
         &:hover {
             background-color: #000;
 
