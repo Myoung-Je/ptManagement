@@ -41,6 +41,7 @@ const TopNav = () => {
                     </Menu.List>
                 </Menu.Container>
             </Container>
+            <Login>login</Login>
         </Wrapper>
     );
 };
@@ -57,12 +58,20 @@ const Container = styled.div`
     align-items: center;
     gap: 80px;
 
+    max-width: 1140px;
+
     padding: 0 40px;
     margin: 0 auto;
     height: 60px;
 `;
 
 const Title = styled.div``;
+
+const Login = styled.div`
+    float: right;
+    margin-top: -40px;
+    margin-right: 20px;
+`;
 
 const Menu = {
     Container: styled.div`
@@ -105,7 +114,7 @@ const Menu = {
             color: #000;
 
             & > span {
-                color: #a66953;
+                color: #000080;
             }
         }
     `,
@@ -144,14 +153,11 @@ const Menu = {
 
         color: #232323;
 
-        & > a {
-            text-decoration: none;
-        }
         &:hover {
-            background-color: #000;
+            background-color: #346d9d;
 
             & > a > span {
-                color: #a66953;
+                color: #fff;
             }
         }
     `,
