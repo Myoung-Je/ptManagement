@@ -41,7 +41,11 @@ const TopNav = () => {
                     </Menu.List>
                 </Menu.Container>
             </Container>
-            <Login>login</Login>
+            <Login.Container>
+                <Link to="/login">
+                    <Login.LinkText>login</Login.LinkText>
+                </Link>
+            </Login.Container>
         </Wrapper>
     );
 };
@@ -67,11 +71,18 @@ const Container = styled.div`
 
 const Title = styled.div``;
 
-const Login = styled.div`
-    float: right;
-    margin-top: -40px;
-    margin-right: 20px;
-`;
+const Login = {
+    Container: styled.div`
+        float: right;
+        margin-top: -40px;
+        margin-right: 20px;
+    `,
+
+    LinkText: styled(Text)`
+        text-decoration: none;
+        color: #fff;
+    `,
+};
 
 const Menu = {
     Container: styled.div`
