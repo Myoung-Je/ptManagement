@@ -3,15 +3,12 @@ import { _axios } from '@/axios/axios';
 
 import styled from 'styled-components';
 
-import Text from '@/component/atoms/text';
-
 const Login = () => {
     return (
         <Wrapper>
             <LoginBox.Container>
-                <LoginBox.Logo>
-                    <Text></Text>
-                </LoginBox.Logo>
+                <LoginBox.Logo>Logo</LoginBox.Logo>
+                <LoginBox.Form></LoginBox.Form>
             </LoginBox.Container>
         </Wrapper>
     );
@@ -31,7 +28,8 @@ const Wrapper = styled.div`
 const LoginBox = {
     Container: styled.div`
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
 
         border: 1px solid #000;
         width: 650px;
@@ -40,6 +38,9 @@ const LoginBox = {
         margin-top: 13%;
     `,
     Logo: styled.div`
-        border: 1px solid #000;
+        font-size: 32px;
+        color: #4682b4;
     `,
+
+    Form: styled.div``,
 };
