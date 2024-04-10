@@ -14,6 +14,7 @@ const Router = (props: { isOpen: boolean }) => {
             <Routes>
                 {props.isOpen && <Route index element={<Navigate to="/home" />} />}
                 {ManageRouter()}
+                <Route path="login" element={<Login />} />
             </Routes>
         </React.Suspense>
     );
