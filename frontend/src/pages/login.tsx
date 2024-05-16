@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { _axios } from '@/axios/axios';
 
+import Input from '@/component/atoms/input';
+import Button from '@/component/atoms/button';
+
 import styled from 'styled-components';
 
 const Login = () => {
@@ -8,7 +11,11 @@ const Login = () => {
         <Wrapper>
             <LoginBox.Container>
                 <LoginBox.Logo>Logo</LoginBox.Logo>
-                <LoginBox.Form></LoginBox.Form>
+                <LoginBox.Form>
+                    <TextInput type="text" placeholder="ID"></TextInput>
+                    <TextInput type="text" placeholder="PW"></TextInput>
+                    <Button width={300} height={38}></Button>
+                </LoginBox.Form>
             </LoginBox.Container>
         </Wrapper>
     );
@@ -42,5 +49,21 @@ const LoginBox = {
         color: #4682b4;
     `,
 
-    Form: styled.div``,
+    Form: styled.div`
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    `,
 };
+
+const TextInput = styled(Input)`
+    width: 300px;
+    height: 38px;
+
+    border: 1px solid #d5d5d5;
+    text-indent: 10px;
+    &::placeholder {
+        color: #d8d8d8;
+    }
+`;

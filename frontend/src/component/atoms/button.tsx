@@ -68,3 +68,5 @@ const Button = styled.button<Iprops>`
         }
     }}
 `;
+
+export default Button;
